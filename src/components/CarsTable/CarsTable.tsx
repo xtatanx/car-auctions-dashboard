@@ -123,51 +123,6 @@ export default function CarsTable({ data, count, rowsPerPage }) {
   return (
     <div>
       <Table>
-        <col
-          style={{
-            minWidth: 152,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 312,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 160,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 160,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 100,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 140,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 140,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 100,
-          }}
-        />
-        <col
-          style={{
-            minWidth: 60,
-          }}
-        />
         <TableHead>
           <TableRow>
             <TableHeaderCell
@@ -285,16 +240,15 @@ export default function CarsTable({ data, count, rowsPerPage }) {
               </TableCell>
             </TableRow>
           ))}
-          <TableRow>
-            <TablePagination
-              rowsPerPage={rowsPerPage}
-              page={page}
-              count={count}
-              onPageChange={handlePageChange}
-            ></TablePagination>
-          </TableRow>
+          <TableRow></TableRow>
         </TableBody>
       </Table>
+      <TablePagination
+        rowsPerPage={rowsPerPage}
+        page={page}
+        count={count}
+        onPageChange={handlePageChange}
+      ></TablePagination>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Button, TablePagination as BasePagination } from '@mui/base';
+import { TablePagination as BasePagination } from '@mui/base';
 import TablePaginationActions from '@/components/TablePagination/TablePaginationActions';
 
 function labelDisplayedRows({ from, to, count }) {
@@ -24,13 +24,13 @@ export default function TablePagination({
   return (
     <BasePagination
       labelDisplayedRows={labelDisplayedRows}
-      className="shadow-tremor-card"
       rowsPerPage={rowsPerPage}
       rowsPerPageOptions={[-1]}
       count={count}
       onPageChange={onPageChange}
       page={page}
       slots={{
+        root: 'div',
         actions: TablePaginationActions,
       }}
       slotProps={{
