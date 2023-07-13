@@ -1,4 +1,3 @@
-import Logout from '@/components/Logout';
 import UserAvatar from '@/components/UserAvatar';
 import { Title } from '@tremor/react';
 import { PropsWithChildren } from 'react';
@@ -22,12 +21,7 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
           <div className="fixed top-0 bottom-0 left-0 right-0 overflow-hidden w-60 p-4 flex flex-col">
             <Title className="mb-8">Auto trader AG</Title>
             <DashboardNav></DashboardNav>
-            <button className="p-4 rounded-tremor-default shadow-tremor-card mt-auto ring-1 ring-tremor-ring">
-              <UserAvatar></UserAvatar>
-            </button>
-            <div className="text-right">
-              <Logout></Logout>
-            </div>
+            <UserAvatar className="mt-auto"></UserAvatar>
           </div>
         </aside>
         <div className="overflow-y-auto w-full">{children}</div>
