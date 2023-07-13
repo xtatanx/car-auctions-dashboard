@@ -19,13 +19,13 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
     <AuthProvider session={session}>
       <div className="grid min-h-screen gap-4 grid-cols-[theme(spacing.60)_1fr]">
         <aside className="bg-white border-gray-200 border-r w-60">
-          <div className="fixed top-0 bottom-0 left-0 right-0 overflow-hidden w-60 p-4">
-            <Title className="mb-7">Auto trader AG</Title>
-            <div className="mb-8">
-              <UserAvatar></UserAvatar>
-            </div>
+          <div className="fixed top-0 bottom-0 left-0 right-0 overflow-hidden w-60 p-4 flex flex-col">
+            <Title className="mb-8">Auto trader AG</Title>
             <DashboardNav></DashboardNav>
-            <div className="mt-auto text-right">
+            <button className="p-4 rounded-tremor-default shadow-tremor-card mt-auto ring-1 ring-tremor-ring">
+              <UserAvatar></UserAvatar>
+            </button>
+            <div className="text-right">
               <Logout></Logout>
             </div>
           </div>

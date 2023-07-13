@@ -13,9 +13,9 @@ export default function UserAvatar() {
         <Image
           src={session.user.image}
           alt=""
-          width={44}
-          height={44}
-          className="w-11 aspect-square overflow-hidden rounded-full flex-shrink-0"
+          width={32}
+          height={32}
+          className="w-11 aspect-square overflow-hidden rounded-full flex-shrink-0 w-8"
         ></Image>
       ) : null}
 
